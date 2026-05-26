@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 에이전트 포털</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f3; color: #1a1a1a; min-height: 100vh; }
+  .container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid #e5e5e0; }
+  .header-left { display: flex; align-items: center; gap: 12px; }
+  .logo { width: 40px; height: 40px; background: #C41230; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 13px; }
+  .header-title { font-size: 17px; font-weight: 600; color: #1a1a1a; }
+  .header-sub { font-size: 12px; color: #888; margin-top: 2px; }
+  .greeting { font-size: 13px; color: #666; }
+  .greeting strong { color: #1a1a1a; font-weight: 500; }
+  .section { margin-bottom: 2rem; }
+  .section-title { font-size: 11px; font-weight: 600; color: #999; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .agent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+  .agent-card { background: #fff; border: 1px solid #ebebeb; border-radius: 14px; padding: 16px; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s; display: flex; flex-direction: column; gap: 10px; text-decoration: none; }
+  .agent-card:hover { border-color: #d0d0d0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); transform: translateY(-1px); }
+  .agent-card:active { transform: translateY(0); }
+  .agent-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+  .icon-blue { background: #E6F1FB; color: #185FA5; }
+  .icon-teal { background: #E1F5EE; color: #0F6E56; }
+  .icon-amber { background: #FAEEDA; color: #854F0B; }
+  .icon-purple { background: #EEEDFE; color: #534AB7; }
+  .icon-coral { background: #FAECE7; color: #993C1D; }
+  .icon-green { background: #EAF3DE; color: #3B6D11; }
+  .agent-name { font-size: 14px; font-weight: 600; color: #1a1a1a; line-height: 1.3; }
+  .agent-desc { font-size: 12px; color: #888; line-height: 1.5; }
+  .agent-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 3px 9px; border-radius: 20px; width: fit-content; font-weight: 500; }
+  .badge-live { background: #EAF3DE; color: #3B6D11; }
+  .badge-beta { background: #FAEEDA; color: #854F0B; }
+  .badge-new { background: #E1F5EE; color: #0F6E56; }
+  .divider { height: 1px; background: #e5e5e0; margin: 0.5rem 0 1.5rem; }
+  .quick-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .quick-btn { display: flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid #e5e5e0; border-radius: 20px; font-size: 12px; color: #666; cursor: pointer; background: #fff; transition: all 0.15s; text-decoration: none; }
+  .quick-btn:hover { border-color: #ccc; color: #1a1a1a; background: #f9f9f7; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-left">
+      <div class="logo">BNK</div>
+      <div>
+        <div class="header-title">AI 에이전트 포털</div>
+        <div class="header-sub">BNK캐피탈 AI 서비스 통합 허브</div>
+      </div>
+    </div>
+    <div class="greeting">안녕하세요, <strong>홍길동 팀장</strong>님</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">업무 지원</div>
+    <div class="agent-grid">
+      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:1da01ef1-36d7-4db8-9b7c-1e5fcc1b23a6" target="_blank">
+        <div class="agent-icon icon-blue"><i class="ti ti-chart-bar"></i></div>
+        <div>
+          <div class="agent-name">업무 모니터링</div>
+          <div class="agent-desc">부서원 업무 현황 및 Task 진행률 확인</div>
+        </div>
+        <div class="agent-badge badge-live"><i class="ti ti-point-filled" style="font-size:8px"></i> 운영중</div>
+      </a>
+      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_2" target="_blank">
+        <div class="agent-icon icon-teal"><i class="ti ti-calendar"></i></div>
+        <div>
+          <div class="agent-name">회의실 예약</div>
+          <div class="agent-desc">회의실 조회 및 예약 자동화</div>
+        </div>
+        <div class="agent-badge badge-live"><i class="ti ti-point-filled" style="font-size:8px"></i> 운영중</div>
+      </a>
+      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_3" target="_blank">
+        <div class="agent-icon icon-amber"><i class="ti ti-building-bank"></i></div>
+        <div>
+          <div class="agent-name">재고금융 실사</div>
+          <div class="agent-desc">재고금융 실사 업무 자동화 지원</div>
+        </div>
+        <div class="agent-badge badge-beta"><i class="ti ti-flask" style="font-size:10px"></i> 베타</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">분석 · 리서치</div>
+    <div class="agent-grid">
+      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_4" target="_blank">
+        <div class="agent-icon icon-purple"><i class="ti ti-report-analytics"></i></div>
+        <div>
+          <div class="agent-name">분석가</div>
+          <div class="agent-desc">데이터 기반 인사이트 및 보고서 생성</div>
+        </div>
+        <div class="agent-badge badge-live"><i class="ti ti-point-filled" style="font-size:8px"></i> 운영중</div>
+      </a>
+      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_5" target="_blank">
+        <div class="agent-icon icon-blue"><i class="ti ti-search"></i></div>
+        <div>
+          <div class="agent-name">리서치 도구</div>
+          <div class="agent-desc">웹 검색 기반 시장·업계 정보 조사</div>
+        </div>
+        <div class="agent-badge badge-live"><i class="ti ti-point-filled" style="font-size:8px"></i> 운영중</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">시스템 연동</div>
+    <div class="agent-grid">
+      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_6" target="_blank">
+        <div class="agent-icon icon-coral"><i class="ti ti-plug"></i></div>
+        <div>
+          <div class="agent-name">업무모니터링 MCP</div>
+          <div class="agent-desc">외부 시스템 연동 확장 버전</div>
+        </div>
+        <div class="agent-badge badge-beta"><i class="ti ti-flask" style="font-size:10px"></i> 베타</div>
+      </a>
+      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_7" target="_blank">
+        <div class="agent-icon icon-green"><i class="ti ti-settings"></i></div>
+        <div>
+          <div class="agent-name">M365 Admin</div>
+          <div class="agent-desc">Microsoft 365 관리 및 설정 지원</div>
+        </div>
+        <div class="agent-badge badge-new"><i class="ti ti-sparkles" style="font-size:10px"></i> 신규</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-title">바로가기</div>
+    <div class="quick-row">
+      <a class="quick-btn" href="#"><i class="ti ti-file-text"></i> 사용 가이드</a>
+      <a class="quick-btn" href="#"><i class="ti ti-message"></i> 에이전트 요청</a>
+      <a class="quick-btn" href="#"><i class="ti ti-bell"></i> 공지사항</a>
+      <a class="quick-btn" href="#"><i class="ti ti-help"></i> 문의하기</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
