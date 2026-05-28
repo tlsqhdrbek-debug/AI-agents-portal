@@ -35,6 +35,9 @@
   .badge-live { background: #EAF3DE; color: #3B6D11; }
   .badge-beta { background: #FAEEDA; color: #854F0B; }
   .badge-new { background: #E1F5EE; color: #0F6E56; }
+  .badge-soon { background: #f0f0ee; color: #999; }
+  .agent-card.soon { cursor: default; opacity: 0.7; }
+  .agent-card.soon:hover { border-color: #ebebeb; box-shadow: none; transform: none; }
   .divider { height: 1px; background: #e5e5e0; margin: 0.5rem 0 1.5rem; }
   .quick-row { display: flex; gap: 8px; flex-wrap: wrap; }
   .quick-btn { display: flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid #e5e5e0; border-radius: 20px; font-size: 12px; color: #666; cursor: pointer; background: #fff; transition: all 0.15s; text-decoration: none; }
@@ -73,57 +76,35 @@
         </div>
         <div class="agent-badge badge-live"><i class="ti ti-point-filled" style="font-size:8px"></i> 운영중</div>
       </a>
-      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_3" target="_blank">
-        <div class="agent-icon icon-amber"><i class="ti ti-building-bank"></i></div>
+      <div class="agent-card soon">
+        <div class="agent-icon icon-amber"><i class="ti ti-clipboard-text"></i></div>
         <div>
-          <div class="agent-name">재고금융 실사</div>
-          <div class="agent-desc">재고금융 실사 업무 자동화 지원</div>
+          <div class="agent-name">보고서 코칭</div>
+          <div class="agent-desc">보고서 작성 가이드 및 첨삭 코칭</div>
         </div>
-        <div class="agent-badge badge-beta"><i class="ti ti-flask" style="font-size:10px"></i> 베타</div>
-      </a>
+        <div class="agent-badge badge-soon"><i class="ti ti-clock" style="font-size:10px"></i> 준비중</div>
+      </div>
+      <div class="agent-card soon">
+        <div class="agent-icon icon-purple"><i class="ti ti-notes"></i></div>
+        <div>
+          <div class="agent-name">회의록 작성</div>
+          <div class="agent-desc">회의 내용 자동 정리 및 회의록 생성</div>
+        </div>
+        <div class="agent-badge badge-soon"><i class="ti ti-clock" style="font-size:10px"></i> 준비중</div>
+      </div>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">분석 · 리서치</div>
+    <div class="section-title">시장 동향</div>
     <div class="agent-grid">
-      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_4" target="_blank">
-        <div class="agent-icon icon-purple"><i class="ti ti-report-analytics"></i></div>
+      <a class="agent-card" href="https://tlsqhdrbek-debug.github.io/daily-strategy-insight/" target="_blank" rel="noopener">
+        <div class="agent-icon icon-coral"><i class="ti ti-news"></i></div>
         <div>
-          <div class="agent-name">분석가</div>
-          <div class="agent-desc">데이터 기반 인사이트 및 보고서 생성</div>
+          <div class="agent-name">뉴스 전략 인사이트</div>
+          <div class="agent-desc">데일리 뉴스 기반 시장 동향 및 전략 인사이트</div>
         </div>
         <div class="agent-badge badge-live"><i class="ti ti-point-filled" style="font-size:8px"></i> 운영중</div>
-      </a>
-      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_5" target="_blank">
-        <div class="agent-icon icon-blue"><i class="ti ti-search"></i></div>
-        <div>
-          <div class="agent-name">리서치 도구</div>
-          <div class="agent-desc">웹 검색 기반 시장·업계 정보 조사</div>
-        </div>
-        <div class="agent-badge badge-live"><i class="ti ti-point-filled" style="font-size:8px"></i> 운영중</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">시스템 연동</div>
-    <div class="agent-grid">
-      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_6" target="_blank">
-        <div class="agent-icon icon-coral"><i class="ti ti-plug"></i></div>
-        <div>
-          <div class="agent-name">업무모니터링 MCP</div>
-          <div class="agent-desc">외부 시스템 연동 확장 버전</div>
-        </div>
-        <div class="agent-badge badge-beta"><i class="ti ti-flask" style="font-size:10px"></i> 베타</div>
-      </a>
-      <a class="agent-card" href="https://teams.microsoft.com/l/chat/0/0?users=28:AGENT_ID_7" target="_blank">
-        <div class="agent-icon icon-green"><i class="ti ti-settings"></i></div>
-        <div>
-          <div class="agent-name">M365 Admin</div>
-          <div class="agent-desc">Microsoft 365 관리 및 설정 지원</div>
-        </div>
-        <div class="agent-badge badge-new"><i class="ti ti-sparkles" style="font-size:10px"></i> 신규</div>
       </a>
     </div>
   </div>
